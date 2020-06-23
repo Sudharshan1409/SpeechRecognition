@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h1>About The Project</h1>
+    <p>The scope of this project is to create a classifier to predict the emotions of the speaker starting from an audio file.For this task, I have used 7268 samples from the RAVDESS dataset (see below to know more about the data).</p>
+    <br>
+    <h4>The samples comes from: </h4>
+    <ul>
+        <li>Audio-only files</li>
+        <li>Video + audio files: I have extracted the audio from each file using the script Mp4ToWav.py that you can find in the main directory of the project.</li>
+    </ul>
+    <br>
+    <h4>The classes we are trying to predict are the following: </h4>
+    {# (0 = neutral, 1 = calm, 2 = happy, 3 = sad, 4 = angry, 5 = fearful, 6 = disgust, 7 = surprised) #}
+    <ul>
+        <li>0 = neutral</li>
+        <li>1 = calm</li>
+        <li>2 = happy</li>
+        <li>3 = sad</li>
+        <li>4 = angry</li>
+        <li>5 = fearful</li>
+        <li>6 = disgust</li>
+        <li>7 = surprised</li>
+    </ul>
+{% endblock %}

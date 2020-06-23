@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <center>
+        <h1>Emotion Detection Using Speech Data</h1>
+        <p>Analyzing the Emotion using the Speech Data</p>
+        <br><br>
+        <img src="{% static 'images/home.png' %}" alt="hello" height="55%" width="55%">
+        <div class="jumbotron text-center" id="myJumbotron2" style="background-color:white">
+            <div class="container" id="Container2">
+              <div class="row">
+                 <div class="col-sm-12 text-center" id="PredictionsOutput">
+                 {% for pred in predictions %}
+                   <h4>The emotion of the speaker in your file is: <strong>{{ pred }}</strong> </h4>
+                 {% endfor %}
+                 </div>
+              </div>
+            </div>
+        </div>
+    </center>
+</div>
+{% endblock %}
